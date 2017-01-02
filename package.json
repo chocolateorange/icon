@@ -1,11 +1,18 @@
 {
   "devDependencies": {
     "eslint": "^3.12.2",
-    "fixpack": "^2.3.1"
+    "fixpack": "^2.3.1",
+    "uglify-save-license": "^0.4.1",
+    "webpack": "^1.14.0"
   },
   "private": true,
   "scripts": {
+    "build": "npm run compile && npm run minify",
+    "compile": "npm run webpack",
+    "develop": "npm run webpack -- --devtool inline-source-map --watch",
     "fixpack": "fixpack",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "minify": "NODE_ENV=production npm run webpack -- --optimize-minimize",
+    "webpack": "webpack --colors --display-error-details --progress"
   }
 }
