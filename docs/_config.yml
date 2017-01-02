@@ -1,0 +1,24 @@
+name:
+  icon
+
+url:
+  https://icon.sasaplus1.com
+
+timezone:
+  Asia/Tokyo
+
+sass:
+  style:
+    nested
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - vendor
