@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "eslint": "^3.12.2",
     "fixpack": "^2.3.1"
   },
   "private": true,
   "scripts": {
-    "fixpack": "fixpack"
+    "fixpack": "fixpack",
+    "lint": "eslint ."
   }
 }
