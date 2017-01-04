@@ -1,4 +1,8 @@
 {
+  "dependencies": {
+    "domready": "^1.0.8",
+    "fallback-preload": "github:sasaplus1-prototype/fallback-preload.js"
+  },
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",

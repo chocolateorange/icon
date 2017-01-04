@@ -1,0 +1,174 @@
+---
+---
+@charset "utf-8";
+
+@mixin narrow-width {
+	@media only screen and (max-width: 1000px - 1px) {
+		@content;
+	}
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	display: block;
+}
+
+.header {
+	padding: 2rem 0 5rem 0;
+
+	.header__inner {
+		box-sizing: border-box;
+		margin: 0 auto;
+		width: 1000px;
+
+		@include narrow-width {
+			margin: 0;
+			width: auto;
+		}
+
+		.header__title.title {
+			text-align: center;
+
+			.title__link {
+				transition: color 0.2s ease 0s;
+
+				&:link, &:visited {
+					color: #aaaaff;
+					text-decoration: none;
+				}
+				&:hover, &:active {
+					color: #ff99ff;
+				}
+			}
+
+			.title__text {
+				display: inline;
+				font-family: "Poiret One", sans-serif;
+				font-weight: lighter;
+				letter-spacing: 0.05rem;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.index {
+	.index__inner {
+		.index__color-area.color-area {
+			margin-bottom: 2rem;
+
+			.color-area__picker {
+				display: block;
+				margin: 0 auto;
+			}
+			.color-area__code {
+				color: #666666;
+				font-family: Verdana, sans-serif;
+				font-size: 70%;
+				margin: 0.2rem 0 0 0;
+				text-align: center;
+			}
+		}
+
+		.index__icon-area.icon-area {
+			.icon-area__list.list {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.list__item.item {
+					margin-bottom: 2rem;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					.item__canvas {
+						display: block;
+						margin: 0 auto;
+					}
+					.item__size {
+						color: #666666;
+						font-family: Verdana, sans-serif;
+						font-size: 70%;
+						margin: 0.2rem 0 0 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	padding: 5rem 0 2rem 0;
+
+	.footer__inner {
+		box-sizing: border-box;
+		margin: 0 auto;
+		width: 1000px;
+
+		@include narrow-width {
+			margin: 0;
+			width: auto;
+		}
+
+		.footer__links.links {
+			.links__list.list {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+
+				.list__item.item {
+					display: inline;
+					margin-right: 10px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					.item__link {
+						font-size: 2rem;
+					}
+
+					.item__feed {
+						&:link, &:visited {
+							color: #fe9507;
+						}
+					}
+					.item__github {
+						&:link, &:visited {
+							color: #000000;
+						}
+					}
+				}
+			}
+		}
+
+		.footer__copyright.copyright {
+			text-align: center;
+
+			.copyright__text {
+				color: #666666;
+				font-family: Verdana, sans-serif;
+				font-size: 70%;
+			}
+
+			.copyright__link {
+				transition: color 0.2s ease 0s;
+
+				&:link, &:visited {
+					color: #aaaaff;
+					text-decoration: none;
+				}
+				&:hover, &:active {
+					color: #ff99ff;
+				}
+			}
+		}
+	}
+}
